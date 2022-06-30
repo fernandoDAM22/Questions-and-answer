@@ -1,0 +1,72 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    font-size: 10px;
+}
+/* This is the main container */
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #2B2D42;
+}
+/* This is the title container */
+.title{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h1{
+    font-size: 5em;
+    color: #EDF2F4;
+}
+/* This is the main class of questions */
+.question{
+    margin: 20px 40px;
+    cursor: pointer;
+    color: #EDF2F4;
+    font-size: 2.5em;
+}
+.question::before{
+    content: '\2b';
+    font-family: "Font Awesome 6 Free";
+    font-size: .7em;
+    margin-right: 10px;
+    color: #EDF2F4;
+}
+/* This class is added to the questions when we click on it */
+.show{
+    margin: 20px 40px;
+    cursor: pointer;
+    color: #EDF2F4;
+    font-size: 2.5em;
+}
+.show::before{
+    content: '\f068'; /*Whit this class we can change the before element*/
+    font-family: "Font Awesome 6 Free";
+    font-size: .5em;
+    margin-right: 10px;
+    color: #EDF2F4;
+}
+.answer{
+    margin: 0 80px;
+    color: #EDF2F4;
+    font-size: 1.5em;
+}
+@media (max-width: 500px){
+    .title{
+        height: 20vh;
+        text-align: center;
+    }
+
+}
